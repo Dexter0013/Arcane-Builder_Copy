@@ -1,3 +1,12 @@
+/**
+ * Copyright (C) 2026 Deepraj Singha (Dexter0013)
+ * * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * * This project is a 2.5D Isometric World Builder built with Three.js.
+ * See the LICENSE file in the root directory for full details.
+ */
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
 
 @tailwind base;
