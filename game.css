@@ -1,0 +1,25 @@
+        /* body {
+            margin: 0;
+            background: #222;
+            color: white;
+            font-family: sans-serif;
+            overflow: hidden;
+        }
+
+        canvas {
+            display: block;
+            cursor: crosshair;
+        }
+
+        .ui {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            pointer-events: none;
+        }
+
+        kbd {
+            background: #444;
+            padding: 2px 5px;
+            border-radius: 3px;
+        } */

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debug Test</title>
+</head>
+<body>
+    <div id="test">Testing...</div>
+    <script>
+        // Simple test to see if the game loads
+        console.log("Page loaded");
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log("DOM Content Loaded");
+            document.getElementById('test').textContent = 'Game should be running...check console';
+        });
+    </script>
+    <script type="module" src="game.js"></script>
+</body>
+</html>

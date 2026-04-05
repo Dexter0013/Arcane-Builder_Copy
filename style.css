@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --bg-primary:       #0a0a14;
+        --bg-vignette:      rgba(10,5,30,0.6);
+        --text-primary:     #d0c0e8;
+        --text-muted:       #aaaaaa;
+        --text-dim:         #6644aa;
+        --accent:           #bb88ff;
+        --accent-glow:      rgba(119,51,255,0.6);
+        --accent-glow2:     rgba(119,51,255,0.2);
+        --panel-bg:         rgba(15,10,30,0.65);
+        --panel-border:     rgba(119,51,255,0.3);
+        --label-color:      #8866cc;
+        --label-shadow:     rgba(119,51,255,0.3);
+        --layer-accent:     #bb88ff;
+        --layer-glow:       rgba(119,51,255,0.6);
+        --bar-bg:           rgba(119,51,255,0.12);
+        --bar-border:       rgba(119,51,255,0.25);
+        --bar-fill-from:    #7733ff;
+        --bar-fill-to:      #bb88ff;
+        --bar-fill-glow:    rgba(119,51,255,0.7);
+        --bar-text:         #7755aa;
+        --swatch-active:    #bb88ff;
+        --swatch-glow:      rgba(119,51,255,0.5);
+        --card-bg:          rgba(12,6,28,0.92);
+        --card-active-bg:   rgba(30,10,60,0.96);
+        --card-active-glow: drop-shadow(0 0 10px rgba(140,60,255,0.8)) drop-shadow(0 0 22px rgba(80,20,180,0.5));
+        --card-aura:        rgba(140,60,255,0.35);
+        --bname-color:      #c8a8ff;
+        --bname-active:     #f0d8ff;
+        --bname-glow:       #bb66ff;
+        --bkey-color:       #664488;
+        --bkey-border:      #442266;
+        --bkey-active:      #aa66ee;
+        --bkey-aborder:     #7733cc;
+        --badge-bg:         #220033;
+        --badge-border:     #7733ff;
+        --badge-color:      #bb88ff;
+        --badge-glow:       rgba(119,51,255,0.5);
+        --tip-bg:           rgba(8,3,20,0.97);
+        --tip-border:       rgba(119,51,255,0.35);
+        --tip-text:         #d0b8f0;
+        --tip-title:        #cc99ff;
+        --tip-glow:         rgba(100,30,220,0.4);
+        --toggle-symbol:    '☀️';
+        --toggle-bg:        rgba(20,10,40,0.85);
+        --toggle-border:    rgba(119,51,255,0.4);
+        --toggle-color:     #bb88ff;
+    }
+
+    body.light-theme {
+        --bg-primary:       #F4EFE6;
+        --bg-vignette:      rgba(180,150,80,0.12);
+        --text-primary:     #2C3E50;
+        --text-muted:       #5C4A28;
+        --text-dim:         #7A6A40;
+        --accent:           #8A6A18;
+        --accent-glow:      rgba(194,153,88,0.7);
+        --accent-glow2:     rgba(194,153,88,0.2);
+        --panel-bg:         rgba(244,239,230,0.65);
+        --panel-border:     rgba(194,153,88,0.5);
+        --label-color:      #6A5010;
+        --label-shadow:     rgba(194,153,88,0.4);
+        --layer-accent:     #C29958;
+        --layer-glow:       rgba(194,153,88,0.6);
+        --bar-bg:           rgba(194,153,88,0.15);
+        --bar-border:       rgba(194,153,88,0.35);
+        --bar-fill-from:    #C29958;
+        --bar-fill-to:      #E8C878;
+        --bar-fill-glow:    rgba(194,153,88,0.6);
+        --bar-text:         #7A6A40;
+        --swatch-active:    #C29958;
+        --swatch-glow:      rgba(194,153,88,0.5);
+        --card-bg:          rgba(244,239,230,0.97);
+        --card-active-bg:   rgba(232,220,196,0.99);
+        --card-active-glow: drop-shadow(0 0 10px rgba(194,153,88,0.8)) drop-shadow(0 0 20px rgba(154,113,48,0.5));
+        --card-aura:        rgba(194,153,88,0.35);
+        --bname-color:      #5A4A2A;
+        --bname-active:     #2C3E50;
+        --bname-glow:       #C29958;
+        --bkey-color:       #7A6A40;
+        --bkey-border:      #C29958;
+        --bkey-active:      #2C3E50;
+        --bkey-aborder:     #8A6A18;
+        --badge-bg:         #E8DCC4;
+        --badge-border:     #C29958;
+        --badge-color:      #2C3E50;
+        --badge-glow:       rgba(194,153,88,0.5);
+        --tip-bg:           rgba(244,239,230,0.99);
+        --tip-border:       rgba(194,153,88,0.4);
+        --tip-text:         #2C3E50;
+        --tip-title:        #7A5010;
+        --tip-glow:         rgba(194,153,88,0.3);
+        --toggle-symbol:    '🌙';
+        --toggle-bg:        rgba(244,239,230,0.9);
+        --toggle-border:    rgba(194,153,88,0.5);
+        --toggle-color:     #6A5010;
+    }
+}
+
+/* Wired elements custom variables specifically */
+wired-card {
+    --wired-card-padding: 12px;
+}
+.b-slot wired-card {
+    --wired-card-padding: 8px;
+}
+
+/* ============================================
+   TOP BAR  (Navigation & Metadata)
+   ============================================ */
+#top-bar {
+    @apply fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 py-3 pointer-events-none transition-all duration-300;
+    backdrop-filter: blur(8px);
+    background: linear-gradient(to bottom, rgba(8,4,22,0.85) 0%, transparent 100%);
+    flex-wrap: wrap; /* Allow wrapping for ultra-narrow screens */
+}
+
+#top-bar > * {
+    @apply pointer-events-auto;
+}
+
+#title-area h1 {
+    @apply text-[1.2rem] sm:text-[1.6rem] m-0 tracking-[1px] sm:tracking-[2px] transition-all;
+}
+
+#block-count {
+    @apply text-[0.7rem] sm:text-[0.95rem] opacity-80;
+}
+
+#layer-info {
+    @apply flex items-center gap-2 sm:flex-col sm:gap-1 transition-all;
+}
+
+#layer-name {
+    @apply text-[0.75rem] sm:text-[0.9rem] whitespace-nowrap;
+}
+
+#layer-progress-bar {
+    @apply w-[60px] sm:w-[140px] h-[5px] sm:h-[7px];
+}
+
+#controls-hint {
+    @apply hidden lg:block text-[0.8rem] opacity-60;
+}
+
+#theme-toggle {
+    @apply flex items-center gap-1.5 px-2 py-1 sm:px-3 sm:py-1.5 text-[0.7rem] sm:text-[0.78rem] bg-toggle-bg border border-toggle-border rounded-full transition-all;
+}
+
+/* --- Ultra-Mobile Optimization (< 480px) --- */
+@media (max-width: 479px) {
+    #top-bar {
+        @apply px-3 py-2;
+        background: rgba(8,4,22,0.92);
+    }
+    #title-area {
+        @apply flex-1 min-w-0;
+    }
+    #theme-toggle {
+        @apply order-2 flex-none;
+    }
+    #layer-info {
+        @apply w-full order-3 mt-2 pt-2 border-t border-[rgba(119,51,255,0.15)] flex-row justify-center gap-4;
+    }
+    #layer-progress-bar {
+        @apply w-[80px];
+    }
+    #title-area h1 {
+        @apply text-[1.05rem];
+    }
+    #block-count {
+        @apply text-[0.65rem];
+    }
+}
+
+@layer components {
+    /* ============================================
+       BUILDING HOTBAR  (bottom of screen)
+       ============================================ */
+    /* Base hotbar — mobile-first: full width, scrollable horizontally */
+    #building-hotbar {
+        @apply fixed bottom-0 left-0 right-0 z-40 flex items-end gap-2 overflow-x-auto px-4 pb-4 pt-2 transition-all duration-300;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+    }
+    #building-hotbar::-webkit-scrollbar { display: none; }
+    #building-hotbar::-webkit-scrollbar { display: none; }
+
+
+    .b-slot {
+        @apply relative cursor-pointer outline-none transition-transform duration-[180ms] ease-[cubic-bezier(.34,1.56,.64,1)] hover:-translate-y-[6px] hover:scale-[1.06];
+    }
+    .b-slot.active {
+        @apply -translate-y-[10px] scale-[1.1];
+    }
+
+    .b-slot wired-card {
+        @apply block w-[82px] bg-card-bg backdrop-blur-[10px] transition-colors duration-[600ms];
+        --wired-card-padding: 8px;
+    }
+    .b-slot.active wired-card {
+        @apply bg-card-active-bg;
+        filter: var(--card-active-glow);
+    }
+
+    .b-icon-wrap {
+        @apply w-[60px] h-[60px] mx-auto mb-1 flex items-center justify-center relative;
+    }
+    .b-icon-wrap svg {
+        @apply w-full h-full overflow-visible;
+    }
+
+    .b-slot.active .b-icon-wrap::after {
+        content: '';
+        @apply absolute inset-[-4px] rounded-full bg-[radial-gradient(circle,var(--card-aura)_0%,transparent_70%)] animate-aura-pulse;
+    }
+
+    .b-label {
+        @apply text-center font-arcane;
+    }
+    .b-name {
+        @apply block text-[0.6rem] text-bname-color tracking-[0.5px] leading-[1.2] mb-[2px];
+    }
+    .b-slot.active .b-name {
+        @apply text-bname-active drop-shadow-[0_0_8px_var(--bname-glow)];
+    }
+
+    .b-key {
+        @apply inline-block text-[0.55rem] text-bkey-color border border-bkey-border rounded-[3px] px-[3px] leading-[1.4];
+    }
+    .b-slot.active .b-key {
+        @apply text-bkey-active border-bkey-aborder;
+    }
+
+    .b-tooltip {
+        @apply absolute bottom-[calc(100%+10px)] left-1/2 -translate-x-1/2 bg-tip-bg border border-tip-border rounded-[6px] py-2 px-3 w-[140px] pointer-events-none opacity-0 transition-opacity duration-[180ms] font-arcane text-[0.72rem] text-tip-text text-center shadow-[0_0_18px_var(--tip-glow)] z-30 whitespace-normal leading-[1.4];
+    }
+    .b-slot:hover .b-tooltip {
+        @apply opacity-100;
+    }
+    .b-tooltip strong {
+        @apply block text-tip-title text-[0.78rem] mb-1 drop-shadow-[0_0_6px_var(--tip-glow)];
+    }
+
+    .b-badge {
+        @apply absolute -top-1.5 -right-1.5 bg-badge-bg border border-badge-border rounded-full w-[17px] h-[17px] text-[0.58rem] text-badge-color flex items-center justify-center font-arcane shadow-[0_0_6px_var(--badge-glow)] transition-colors duration-[600ms];
+    }
+
+    /* ============================================
+       PANEL COMPONENTS (Swatches and Buttons)
+       ============================================ */
+    .color-swatch {
+        @apply w-full aspect-square rounded-[4px] cursor-pointer border-[2px] border-transparent transition-all duration-[150ms] hover:scale-[1.15] shadow-none;
+    }
+    .color-swatch.active {
+        @apply scale-[1.15] shadow-[0_0_12px_var(--swatch-glow)];
+        border-color: var(--swatch-active) !important;
+    }
+
+    wired-button {
+        @apply transition-transform duration-[150ms] ease-in-out cursor-pointer;
+    }
+    wired-button:hover {
+        @apply scale-[1.03] drop-shadow-[0_0_8px_var(--badge-glow)];
+    }
+    wired-button:active {
+        @apply scale-[0.97];
+    }
+}
+
+/* ── Desktop & tablet (≥ 768px): centre the hotbar ─────── */
+@media (min-width: 768px) {
+    #building-hotbar {
+        @apply left-1/2 right-auto -translate-x-1/2 justify-center overflow-visible w-auto px-0 bg-transparent;
+        mask-image: none;
+        bottom: 20px;
+        gap: 12px;
+    }
+}
+
+@media (min-width: 1280px) {
+    #building-hotbar { 
+        gap: 16px; 
+        bottom: 24px; 
+    }
+}
+
+/* Controls hint: hide below 1024px */
+@media (max-width: 1023px) {
+    #controls-hint { display: none !important; }
+}
+
+/* ══ PANEL TOGGLE BUTTON — hidden on desktop ═ */
+#panel-toggle-btn {
+    @apply fixed bottom-[100px] right-4 z-[60] w-12 h-12 rounded-full flex items-center justify-center cursor-pointer border-none transition-all duration-300 shadow-lg lg:hidden;
+    background: rgba(119, 51, 255, 0.85);
+    backdrop-filter: blur(8px);
+    color: white;
+    font-size: 1.4rem;
+}
+
+#panel-toggle-btn.panel-active {
+    background: rgba(200, 40, 60, 0.85);
+    @apply scale-90;
+}
+
+/* Side panel handling */
+#side-panel {
+    @apply fixed top-[70px] lg:top-[90px] right-4 z-50 flex flex-col gap-4 transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)];
+    width: 220px;
+    max-height: calc(100vh - 120px);
+}
+
+@media (max-width: 1023px) {
+    #side-panel {
+        @apply translate-x-[calc(100%+32px)] opacity-0;
+        pointer-events: none;
+    }
+    #side-panel.panel-open {
+        @apply translate-x-0 opacity-100;
+        pointer-events: auto;
+    }
+}
