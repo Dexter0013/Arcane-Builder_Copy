@@ -119,3 +119,19 @@ Every push or Pull Request to the `main` branch will trigger the [GitHub Action]
 ## Architecture & Styles
 
 The application relies on `style.css` for a centralized definition of CSS variables that map directly into `tailwind.config.js`. This creates a robust bridge between the CSS custom properties dynamically controlled by the theme toggle and the Tailwind rendering engine. Repeated structures (like the `b-slot` building hotbar items) utilize Tailwind's `@layer components` and `@apply` to maintain clean, DRY HTML.
+
+---
+
+## 📜 License
+
+Copyright © 2026 **Deepraj Singha (Dexter0013)**.
+
+This project is licensed under the **GNU General Public License v3.0 (GPLv3)**. 
+
+**What this means for you:**
+* **Forking:** You are free to fork and modify this code.
+* **Attribution:** You **must** keep the original copyright notices and license intact.
+* **Copyleft:** If you distribute a modified version, you **must** release it under the same GPLv3 license (it cannot be closed-source).
+* **Ownership:** You cannot claim ownership of the original product or architecture.
+
+See the [LICENSE](./LICENSE) file for the full legal text.
