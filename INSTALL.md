@@ -3,6 +3,7 @@
 ## From npm
 
 ```bash
+npm init -y
 npm install @slothslasher/arcane-builder-copy
 npm start
 ```
