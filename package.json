@@ -1,6 +1,6 @@
 {
   "name": "@slothslasher/arcane-builder-copy",
-  "version": "1.0.2",
+  "version": "1.1.5",
   "type": "module",
   "description": "An immersive isometric dungeon building experience with procedural generation, multi-layered depth, and distinct arcane aesthetics. Built with Three.js and Vite.",
   "author": "Deepraj Singha (Dexter0013)",
@@ -19,19 +19,12 @@
     "web-audio",
     "procedural-generation"
   ],
-  "main": "./dist/index.html",
-  "bin": {
-    "arcane-builder": "bin/arcane-builder.js"
-  },
   "files": [
     "dist",
-    "bin"
+    "setup.js"
   ],
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "start": "serve dist -l 3000"
+    "postinstall": "node setup.js"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.19",
@@ -45,3 +38,4 @@
     "wired-elements": "^3.0.0-rc.6"
   }
 }
+
