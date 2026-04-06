@@ -7,6 +7,10 @@ Built with Three.js, Vite, and the Web Audio API for a fully reactive environmen
 
 [![npm version](https://badge.fury.io/js/%40slothslasher%2farcane-builder-copy.svg)](https://www.npmjs.com/package/@slothslasher/arcane-builder-copy)
 ![License](https://img.shields.io/badge/license-GPL--3.0-blue)
+![Three.js](https://img.shields.io/badge/Three.js-0.183.2-1a1a1a?logo=three.js)
+![Vite](https://img.shields.io/badge/Vite-8.0.3-646CFF?logo=vite)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3.4.3-06B6D4?logo=tailwind-css)
+![Node.js](https://img.shields.io/badge/Node.js-ES%20Modules-339933?logo=node.js)
 
 **📦 NPM Package:** [@slothslasher/arcane-builder-copy](https://www.npmjs.com/package/@slothslasher/arcane-builder-copy)
 **📖 [Installation Guide →](./INSTALL.md)**
@@ -31,12 +35,16 @@ Built with Three.js, Vite, and the Web Audio API for a fully reactive environmen
 
 ## Technology Stack
 
-- **Core:** Three.js (v0.132.2) — locally installed via npm
-- **Post-Processing:** Bloom & Glow effects via UnrealBloomPass
-- **Audio:** Web Audio API (Real-time synthesis)
-- **Tooling:** Vite
-- **Styling:** Tailwind CSS (Utility classes and custom `@layer` directives) + CSS Variables
-- **UI Components:** wired-elements
+| Library | Version | Purpose |
+|---------|---------|---------|
+| **Three.js** | v0.183.2 | 3D graphics rendering & scene management |
+| **Vite** | v8.0.3 | Fast build tool & dev server with HMR |
+| **Tailwind CSS** | v3.4.3 | Utility-first CSS framework |
+| **wired-elements** | v3.0.0-rc.6 | Hand-drawn UI components |
+| **serve** | v14.2.0 | Static file server for production |
+| **Web Audio API** | Native | Real-time procedural sound synthesis |
+| **PostCSS** | v8.4.38 | CSS transformation pipeline |
+| **AutoPrefixer** | v10.4.19 | CSS vendor prefix automation |
 
 ## Getting Started
 
