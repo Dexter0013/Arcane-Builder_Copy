@@ -13,8 +13,8 @@ try {
     const pkg = JSON.parse(fs.readFileSync(consumerPkgPath, 'utf8'));
     pkg.scripts = pkg.scripts || {};
     pkg.scripts.start = 'serve node_modules/@slothslasher/arcane-builder-copy/dist -l 3000';
-    pkg.scripts.dev = 'serve node_modules/@slothslasher/arcane-builder-copy/dist -l 3000';
-    pkg.scripts.build = "echo 'Game is pre-built and ready to deploy'";
+    // pkg.scripts.dev = 'serve node_modules/@slothslasher/arcane-builder-copy/dist -l 3000';
+    // pkg.scripts.build = "echo 'Game is pre-built and ready to deploy'";
     fs.writeFileSync(consumerPkgPath, JSON.stringify(pkg, null, 2) + '\n');
     console.log('✅ Arcane Builder installed! Run: npm start');
   } else {
