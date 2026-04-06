@@ -25,3 +25,4 @@ README.md
 # Environment files
 .env
 .env.local
+.npmrc
