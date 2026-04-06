@@ -1,0 +1,27 @@
+# Development files
+node_modules/
+.git
+.github
+.agents
+.gitignore
+package-lock.json
+
+# Source files (only dist needed)
+game.js
+index.html
+style.css
+game.css
+tailwind.config.js
+postcss.config.js
+
+# Development docs
+DEPENDENCIES.md
+README.md
+
+# Build artifacts to exclude
+*.map
+.vite
+
+# Environment files
+.env
+.env.local
