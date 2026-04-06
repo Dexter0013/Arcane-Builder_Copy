@@ -13,6 +13,7 @@ node_modules/
 # Production Build
 dist/
 dist-ssr/
+build/
 
 # IDE & OS Files
 .DS_Store
@@ -31,3 +32,14 @@ dist-ssr/
 .env.development.local
 .env.test.local
 .env.production.local
+
+# NPM token (sensitive - DO NOT COMMIT)
+.npmrc
+
+# Additional ignores
+*.tgz
+.cache
+.next
+out/
+coverage/
+
