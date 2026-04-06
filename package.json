@@ -1,6 +1,6 @@
 {
   "name": "@slothslasher/arcane-builder-copy",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "type": "module",
   "description": "An immersive isometric dungeon building experience with procedural generation, multi-layered depth, and distinct arcane aesthetics. Built with Three.js and Vite.",
   "author": "Deepraj Singha (Dexter0013)",

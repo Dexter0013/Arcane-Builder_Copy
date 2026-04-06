@@ -6,7 +6,7 @@
 
 ## Reporting a Vulnerability
 
-If you discover a security vulnerability, please email [security@example.com](mailto:security@example.com) instead of using the issue tracker.
+If you discover a security vulnerability, please email [deeprajsingha1122@gmail.com](mailto:deeprajsingha1122@gmail.com) instead of using the issue tracker.
 
 Include:
 - Description of the vulnerability
