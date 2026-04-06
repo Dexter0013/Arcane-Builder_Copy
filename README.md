@@ -3,6 +3,13 @@
 An immersive isometric dungeon building experience with procedural generation, multi-layered depth, and distinct arcane aesthetics.
 Built with Three.js, Vite, and the Web Audio API for a fully reactive environment.
 
+[![npm version](https://badge.fury.io/js/%40slothslasher%2farcane-builder-copy.svg)](https://www.npmjs.com/package/@slothslasher/arcane-builder-copy)
+![License](https://img.shields.io/badge/license-GPL--3.0-blue)
+
+**📦 NPM Package:** [@slothslasher/arcane-builder-copy](https://www.npmjs.com/package/@slothslasher/arcane-builder-copy)
+**📖 [Installation Guide →](./INSTALL.md)**
+**🔒 [Security Policy →](./SECURITY.md)**
+
 ## Screenshots
 <img width="1897" height="865" alt="image" src="https://github.com/user-attachments/assets/19cdac92-45a9-401c-8a36-e4b52e7c3c0b" />
 <img width="1903" height="860" alt="image" src="https://github.com/user-attachments/assets/876d93c2-4f02-4a4d-8253-2a34f6961af4" />
